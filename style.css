@@ -1,136 +1,262 @@
 /*Définition des polices personnalisées*/
-@font-face{
+@font-face {
     font-family: 'ballparkWeiner';
     src: url('polices/polices/ballpark.eot');
     src: url('polices/polices/ballpark.eot?#iefix') format('embedded-opentype'),
-         url('polices/polices/ballpark.woff') format('woff'),
-         url('polices/polices/ballpark.ttf') format('truetype'),
-         url('polices/polices/ballpark.svg#BallparkWeiner') format('svg');
-font-weight: normal;    
-font-style: normal;
-}
-@font-face
-{
-    font-family: 'Dayrom';
-    src: url('polices/polices/dayrom.eot');
-    src: url('polices/polices/dayrom.eot?#iefix') format('embedded-opentype'),
-         url('polices/polices/dayrom.woff') format('woff'),
-         url('polices/polices/dayrom.ttf') format('truetype'),
-         url('polices/polices/dayrom.svg#Dayrom') format('svg');
+        url('polices/polices/ballpark.woff') format('woff'),
+        url('polices/polices/ballpark.ttf') format('truetype'),
+        url('polices/polices/ballpark.svg#BallparkWeiner') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-body{
-    background: url('photos/imagebackground.jpg');
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    color:#9294E8;
-}
-#bloc_page{
 
-    width: 1000px;
+@keyframes couloursss{
+    0%{
+        color:hsl(0, 91%, 49%);
+        text-shadow:1px 5px 15px hsl(281, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(281, 100%, 74%);
+    }
+    10%{
+        color:hsl(242, 55%, 12%);
+        text-shadow:1px 5px 15px hsl(241, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(241, 100%, 74%);
+    }
+    20%{
+        color:hsl(204, 93%, 23%);
+        text-shadow:1px 5px 15px hsl(204, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(204, 100%, 74%);
+    }
+    30%{
+        color:hsl(278, 88%, 13%);
+        text-shadow:1px 5px 15px hsl(130, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(130, 100%, 74%);
+    }
+    40%{
+        color:hsl(258, 16%, 46%);
+        text-shadow:1px 5px 15px hsl(120, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(120, 100%, 74%);
+    }
+    50%{
+        color:hsl(177, 90%, 12%);
+        text-shadow:1px 5px 15px hsl(76, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(76, 100%, 74%);
+    }
+    60%{
+        color:hsl(32, 100%, 74%);
+        text-shadow:1px 5px 15px hsl(32, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(32, 100%, 74%);
+    }
+    70%{
+        color:hsl(261, 93%, 16%);
+        text-shadow:1px 5px 15px hsl(17, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(17, 100%, 74%);
+    }
+    80%{
+        color:hsl(0, 100%, 74%);
+        text-shadow:1px 5px 15px hsl(0, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(0, 100%, 74%);
+    }
+    90%{
+        color:hsl(325, 51%, 15%);
+        text-shadow:1px 5px 15px hsl(325, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(325, 100%, 74%);
+    }
+    100%{
+        color:hsl(0, 94%, 49%);
+        text-shadow:1px 5px 15px hsl(281, 100%, 74%);
+        box-shadow: 1px 5px 15px hsl(281, 100%, 74%);
+    }
+}
+
+@font-face {
+    font-family: 'Dayrom';
+    src: url('polices/polices/dayrom.eot');
+    src: url('polices/polices/dayrom.eot?#iefix') format('embedded-opentype'),
+        url('polices/polices/dayrom.woff') format('woff'),
+        url('polices/polices/dayrom.ttf') format('truetype'),
+        url('polices/polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BloodCrow';
+    src: url(./polices/polices/bloodcrow.ttf);
+}
+
+body {
+    /* background: url('photos/imagebackground.jpg'); */
+    background: radial-gradient(var(--primary-color), var(--secondary-color));
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #9294E8;
+    --primary-color: #440044;
+    --secondary-color: black;
+    /*--accent-1: 
+    --accent-2:
+    --accent-3: */
+    margin: 50px;
+}
+
+.entete{
+    font-family: BloodCrow;
+    animation: couloursss 3s infinite;
+    text-shadow: 1px 5px 15px #ffffff;
+    font-size: 80px;
+    border:solid;
+    padding: 20px;
+    border-radius: 70px;
+    box-shadow: 1px 5px 15px #ffffff;
+
+}
+
+#bloc_page {
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
 }
-section h1, footer h1, nav a{
+
+section h1,
+footer h1,
+nav a {
     font-family: dayrom, serif;
     font-weight: normal;
     text-transform: uppercase;
 }
+
 /*header*/
-header{
+header {
     background: url('photos/images/separateur.png') repeat-x;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-#titre_principal{
-    display: flex;
-    flex-direction: column;
-}
-#logo{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-#logo img
-{
-    width: 59px;
-    height: 60px;
-}
-header h1
-{
-    font-family: 'BallparkWeiner', serif;
-    font-size: 2.5em;
-    font-weight: normal;
-    margin: 0 0 0 10px;
-}
-/* Header */
-
-header
-{
-    background: url('photos/images/separateur.png') repeat-x bottom;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    display: block;
 }
 
-#titre_principal
-{
+#titre_principal {
     display: flex;
     flex-direction: column;
 }
 
-#logo
-{
+#logo {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
-#logo img
-{
-    width: 59px;
-    height: 60px;
+#logo img {
+    width: 20%;
+    height: auto;
+    max-width: 100px;
+}
+.rock{
+    color:white;
+    font-style: italic;
 }
 
-header h1
-{
+header h1 {
     font-family: 'BallparkWeiner', serif;
-    font-size: 2.5em;
+    font-size: 3.5em;
     font-weight: normal;
     margin: 0 0 0 10px;
+    flex-shrink: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-header h2
-{
+header h2 {
     font-family: Dayrom, serif;
     font-size: 1.1em;
-    margin-top: 0px;
+    margin-top: 37px;
     font-weight: normal;
+
 }
+
+
+
+h3 {
+    align-items: center;
+    color: white;
+}
+#banniere_image {
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('photos/banniereretaille.jpg') no-repeat;
+    position: relative;
+    box-shadow: 0px 4px 4px rgb(246, 178, 237);
+    margin-bottom: 25px;
+    border-top-style: solid;
+    /* background-size: cover; */
+}
+
+#banniere_description {
+    position: absolute;
+    bottom: 10px;
+    border-radius: 0px 0px 5px 5px;
+    width: calc(100% - 20px);
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgba(24, 24, 24, 0.8);
+    margin: 0;
+    margin-left: 10px;
+    color: wheat;
+}
+
 /*navigation*/
-nav ul{
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
     list-style-type: none;
     display: flex;
 }
-nav li{
+
+nav li {
     margin-right: 15px;
 }
-nav a{
+
+nav a {
     font-size: 1.3em;
     color: #e70878;
     padding-bottom: 3px;
     text-decoration: none;
+    background: black;
 
 }
-nav a:hover{
-    color: #760001;
+
+nav a:hover {
+    color: #8a7071;
     border-bottom: 3px solid #760001;
 }
 
-/* Présentation artistes */
+/* Présentation groupe et artistes */
+
+.presentation {
+    text-align: center;
+}
+
+.logomagnum {
+    padding: 7;
+    float: left;
+    margin: 0;
+}
+
 .block-musicien {
     position: relative;
+    margin: -10px;
+    padding: 15px;
 }
+
+.musicien {
+    font-size: 120%;
+    font-style: italic;
+    color: aliceblue;
+    padding: 0.5px;
+
+}
+
 
 .avatar {
     position: absolute;
@@ -159,35 +285,17 @@ nav a:hover{
 
     /* On le remet en place */
     transform: translate(0);
-    
+
 }
-div{
+
+div {
     margin: 20px;
 }
-#banniere_image
-{
-    margin-top: 15px;
-    height: 200px;
-    border-radius: 5px;
-    background: url('photos/banniere_oneshot.jpg') no-repeat;
-    position: relative;
-    box-shadow: 0px 4px 4px rgb(246, 178, 237);
-    margin-bottom: 25px;
+
+
 }
-#banniere_description{
-    position: absolute;
-    bottom: 10px;
-    border-radius: 0px 0px 5px 5px;
-    width: calc(100% - 20px);
-    height: 33px;
-    padding-top: 15px;
-    padding-left: 4px;
-    background-color: rgba(24,24,24,0.8);
-    margin: 0;
-    margin-left: 10px;
-    color: wheat;  
-}
-.bouton{
+
+.bouton {
     height: 25px;
     position: absolute;
     right: 5px;
@@ -198,14 +306,50 @@ div{
     font-size: 1.2em;
     text-align: center;
     padding: 3px 8px 0px 8px;
-    color : white;
+    color: white;
     text-decoration: none;
 }
-.bouton img{border: 0;}
+
+.bouton img {
+    border: 0;
+}
 
 /*corps*/
-section{
+section {
     display: flex;
     margin-bottom: 20px;
 }
 
+article,
+aside {
+    text-align: justify;
+}
+
+article {
+    font-size: 0.8;
+    background-color: rgb(31, 2, 31);
+    box-shadow: 0px 0px 5px rgb(243, 9, 192);
+    border-radius: 5px;
+
+}
+
+.presentation {
+    text-shadow: 1px 2px 3px rgb(13, 233, 196);
+    font-size: 150%;
+    color: white;
+}
+
+p {
+    margin: 5%;
+}
+
+.block-musicien {
+    margin: 5%;
+}
+
+.lineup {
+    text-shadow: 0px 1px 2px rgb(243, 9, 165);
+    text-align: center;
+    color: rgb(9, 28, 136);
+
+}
